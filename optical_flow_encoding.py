@@ -36,5 +36,12 @@ while(1):
 
 cv.destroyAllWindows()
 
+hflow = np.array(allHorizontalFlowValues)
+vflow = np.array(allVerticalFlowValues)
+
 print("Horizontal flow array shape:", np.array(allHorizontalFlowValues).shape)
 print("Vertical flow array shape:", np.array(allVerticalFlowValues).shape)
+
+np.save("horizontal_flow.npy", hflow)
+np.save("vertical_flow.npy", vflow)
+print("Saved horizontal_flow.npy and vertical_flow.npy successfully.")
